@@ -1,0 +1,52 @@
+.navContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 0.3s;
+  h1 {
+    margin: 0;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 20px;
+      transition: all 0.3s;
+      &:hover {
+        background-color: #0088bb;
+        color: #fff;
+      }
+      a {
+        font-weight: 600;
+      }
+    }
+  }
+  .navButton {
+    background-color: transparent;
+    border: none;
+    color: white;
+    svg {
+      font-size: 20px;
+      line-height: 20px;
+      transition: all 0.3s;
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+.active {
+  background-color: #fff;
+  color: #000;
+  .navButton {
+    color: #000;
+  }
+}
