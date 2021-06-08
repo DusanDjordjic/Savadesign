@@ -1,0 +1,10 @@
+.cardContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+@media only screen and (min-width: 992px) {
+  .cardContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

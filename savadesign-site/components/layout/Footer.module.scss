@@ -1,0 +1,39 @@
+@import "../../styles/globals/vars.scss";
+.footer {
+  z-index: 5;
+  padding: 50px 20px;
+  padding-bottom: 10px;
+  background-color: $--clr-black;
+  color: $--clr-gray;
+
+  .container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr;
+    h3 {
+      font-size: $--font-h3;
+      color: $--clr-white;
+      font-weight: 400;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+  .copy {
+    border-top: 1px solid $--clr-gray;
+    padding: 10px;
+    margin-top: 20px;
+    color: $--clr-white;
+    text-align: center;
+  }
+  span {
+    color: $--clr-green;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .footer {
+    .container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}

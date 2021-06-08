@@ -1,0 +1,29 @@
+@import "../../styles/globals/vars.scss";
+.card {
+  background-color: $--clr-green-darker;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto;
+  h3 {
+    font-size: $--font-h3;
+    margin: 20px 0;
+  }
+  p {
+    text-align: justify;
+  }
+  svg {
+    width: 20%;
+    height: 20%;
+  }
+}
+@media only screen and (min-width: 766px) {
+  .card {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .card {
+    width: 100%;
+  }
+}

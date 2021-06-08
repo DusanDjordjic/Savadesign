@@ -1,42 +1,80 @@
+@import "../../styles/globals/vars.scss";
 .navContainer {
+  z-index: 5;
+  padding: 15px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: #fff;
+  background-color: $--clr-black-04;
+  color: $--clr-white;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  transition: all 0.3s;
+  transition: $--transition;
   h1 {
     margin: 0;
   }
   ul {
     list-style: none;
-    display: flex;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    transform: scale(0);
+    transition: $--transition;
+    background-color: $--clr-black-04;
     margin: 0;
-    padding: 0;
-    li {
-      padding: 20px;
-      transition: all 0.3s;
-      &:hover {
-        background-color: #0088bb;
-        color: #fff;
+    padding: 30px;
+    div {
+      padding: 30px;
+      position: absolute;
+      top: 60px;
+      bottom: 60px;
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.6);
+      left: 60px;
+      right: 60px;
+      background-color: $--clr-white;
+
+      text-align: right;
+      .closeOverlay {
+        background-color: transparent;
+        border: none;
+        color: red;
+        margin: 10px;
       }
-      a {
-        font-weight: 600;
+      li {
+        text-align: left;
+        padding: 20px;
+        transition: $--transition;
+        &:hover {
+          background-color: $--clr-green-darker;
+          color: $--clr-white;
+        }
+        a {
+          font-weight: 600;
+        }
+      }
+      .linkActive {
+        background-color: $--clr-green-darker;
+        color: $--clr-white;
       }
     }
+  }
+  ul.active {
+    transform: scale(1);
+    box-shadow: none;
   }
   .navButton {
     background-color: transparent;
     border: none;
-    color: white;
+    color: $--clr-white;
     svg {
       font-size: 20px;
       line-height: 20px;
-      transition: all 0.3s;
+      transition: $--transition;
       &:hover {
         transform: rotate(90deg);
       }
@@ -44,9 +82,36 @@
   }
 }
 .active {
-  background-color: #fff;
-  color: #000;
+  background-color: $--clr-white;
+  color: $--clr-black;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.6);
   .navButton {
-    color: #000;
+    display: block;
+    color: $--clr-black;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .navContainer {
+    padding: 0px;
+    ul {
+      position: static;
+      transform: translateX(0);
+      background-color: transparent;
+      padding: 0px;
+      div {
+        padding: 0px;
+        position: static;
+        display: flex;
+        background-color: transparent;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0);
+        .closeOverlay {
+          display: none;
+        }
+      }
+    }
+    .navButton {
+      display: none;
+    }
   }
 }
