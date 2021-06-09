@@ -1,0 +1,69 @@
+@import "../../styles/globals/vars.scss";
+.carouselCard {
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+  background-color: $--clr-white;
+  .projectImg {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    overflow: hidden;
+    padding-bottom: 4px;
+    background-color: $--clr-green;
+    margin-bottom: 2px;
+    div {
+      position: relative !important;
+    }
+    img {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+      width: 100% !important;
+      height: auto !important;
+      margin: 0 !important;
+      position: relative !important;
+      min-width: 0 !important;
+      min-height: 0 !important;
+    }
+  }
+  .cardText {
+    padding: 20px;
+
+    h4 {
+      font-size: $--font-h2;
+    }
+    .date {
+      margin: 10px;
+      font-size: $--font-h3;
+      color: $--clr-green;
+    }
+  }
+  .cardFooter {
+    border-top: 1px solid $--clr-black-04;
+    a {
+      padding: 20px;
+      text-align: right;
+      cursor: pointer;
+      justify-content: flex-end;
+      display: flex;
+      align-items: flex-center;
+      color: $--clr-black;
+      font-size: $--font-h3;
+      line-height: $--font-h3;
+      transition: $--transition;
+      &:hover {
+        color: $--clr-green-darker;
+        svg {
+          transform: translateX(50%);
+        }
+      }
+      svg {
+        margin-top: 2px;
+        position: relative;
+        font-size: $--font-h3;
+        line-height: $--font-h3;
+        transition: transform 0.3s;
+      }
+    }
+  }
+}
+.wrapper {
+  align-self: auto;
+}

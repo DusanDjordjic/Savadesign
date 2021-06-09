@@ -1,7 +1,8 @@
 import Link from "next/link";
-
+import { carousel } from "../../data/carousel";
 import classes from "./Footer.module.scss";
-const Footer = () => {
+import { IoMdArrowDropright } from "react-icons/io";
+const Footer = ({ items }) => {
   return (
     <footer className={classes.footer}>
       <div className={classes.container}>
@@ -15,26 +16,50 @@ const Footer = () => {
           </p>
         </div>
         <div>
-          <h3>SavaDesign</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio
-            explicabo obcaecati distinctio quam, corrupti quod reiciendis eum
-            ab. Ducimus ipsa dolor amet nihil commodi repellat, corporis esse
-            ullam cupiditate totam.
-          </p>
+          <h3>Projects</h3>
+          <div className={classes.projectsContainer}>
+            {carousel.map((item) => {
+              return (
+                <Link href={`/ship/${item._id}`}>
+                  <a>
+                    {item.title} <IoMdArrowDropright />
+                  </a>
+                </Link>
+              );
+            })}
+          </div>
         </div>
-        <div>
-          <h3>SavaDesign</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio
-            explicabo obcaecati distinctio quam, corrupti quod reiciendis eum
-            ab. Ducimus ipsa dolor amet nihil commodi repellat, corporis esse
-            ullam cupiditate totam.
-          </p>
+        <div className={classes.navigation}>
+          <h3>Navigation</h3>
+          <Link href={`/#start`}>
+            <a>
+              Home <IoMdArrowDropright />
+            </a>
+          </Link>
+          <Link href={`/#wwd`}>
+            <a>
+              What we do <IoMdArrowDropright />
+            </a>
+          </Link>
+          <Link href={`/#hww`}>
+            <a>
+              How we work <IoMdArrowDropright />
+            </a>
+          </Link>
+          <Link href={`/#projects`}>
+            <a>
+              Projects <IoMdArrowDropright />
+            </a>
+          </Link>
+          <Link href={`/#contact`}>
+            <a>
+              Contact <IoMdArrowDropright />
+            </a>
+          </Link>
         </div>
       </div>
       <p className={classes.copy}>
-        <span>&copy;</span> SavaDesign {`${new Date().getFullYear()}`}
+        &copy; SavaDesign {`${new Date().getFullYear()}`}
       </p>
     </footer>
   );

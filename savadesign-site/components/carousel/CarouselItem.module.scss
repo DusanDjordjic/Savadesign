@@ -1,0 +1,23 @@
+@import "../../styles/globals/vars.scss";
+.carouselItem {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  padding: 20px;
+}
+@media only screen and (min-width: 766px) {
+  .carouselItem {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .carouselItem {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .carouselItem {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

@@ -22,8 +22,6 @@ const Navigation = () => {
     };
   });
 
-  const router = useRouter();
-
   return (
     <nav>
       <div
@@ -46,30 +44,30 @@ const Navigation = () => {
             >
               <ImCross />
             </button>
-            <li className={router.pathname == "/" ? classes.linkActive : ""}>
-              <Link href="/">Home</Link>
+            <li>
+              <Link href="/#start" onClick={() => console.log("hi")}>
+                Home
+              </Link>
             </li>
-            <li
-              className={router.pathname == "/about" ? classes.linkActive : ""}
-            >
-              <Link href="/about">About</Link>
+            <li>
+              <Link href="/#wwd" onClick={() => setNavbarToggled(false)}>
+                What we do
+              </Link>
             </li>
-            <li
-              className={router.pathname == "/blog" ? classes.linkActive : ""}
-            >
-              <Link href="/blog">Blog</Link>
+            <li>
+              <Link href="/#hww" onClick={() => setNavbarToggled(false)}>
+                How we work
+              </Link>
             </li>
-            <li
-              className={
-                router.pathname == "/contact" ? classes.linkActive : ""
-              }
-            >
-              <Link href="/contact">Contact</Link>
+            <li>
+              <Link href="/#projects" onClick={() => setNavbarToggled(false)}>
+                Projects
+              </Link>
             </li>
-            <li
-              className={router.pathname == "/ships" ? classes.linkActive : ""}
-            >
-              <Link href="/ships">Ships</Link>
+            <li>
+              <Link href="/#contact" onClick={() => setNavbarToggled(false)}>
+                Contact
+              </Link>
             </li>
           </div>
         </ul>

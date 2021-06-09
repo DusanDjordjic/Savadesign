@@ -10,8 +10,8 @@ const CardContainer = ({ data }) => {
   return (
     <>
       <div className={classes.cardContainer}>
-        {data.map((item) => {
-          return <Card {...item} />;
+        {data.map((item, index) => {
+          return <Card key={index} {...item} />;
         })}
       </div>
     </>

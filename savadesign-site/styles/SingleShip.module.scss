@@ -1,0 +1,113 @@
+@import "./globals/vars.scss";
+.container {
+  padding: 100px 0;
+  margin: 0 20px;
+  background-color: $--clr-white;
+  .header {
+    text-align: center;
+    p {
+      margin: 10px;
+      font-size: $--font-h3;
+      color: $--clr-green;
+    }
+  }
+  .content {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    .text {
+      button {
+        background-color: $--clr-green;
+        padding: 15px;
+        border: none;
+        font-size: $--font-h3;
+        border-radius: 5px;
+        color: $--clr-white;
+        font-weight: 500;
+        margin-top: 15px;
+        transition: $--transition;
+        &:hover {
+          background-color: $--clr-green-darker;
+        }
+      }
+      p {
+        text-align: justify;
+      }
+    }
+    .table {
+      table {
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.6);
+        border-spacing: 0;
+        width: 100%;
+        color: $--clr-white;
+
+        tr {
+          background-color: $--clr-green;
+          transition: $--transition;
+          &:nth-child(2n-1) {
+            background-color: $--clr-green-darker;
+          }
+          td {
+            padding: 10px;
+
+            &:nth-child(2n-1) {
+              font-weight: 500;
+              border-right: 1px solid $--clr-black-04;
+            }
+          }
+          &:hover {
+            filter: grayscale(70%);
+          }
+        }
+      }
+    }
+  }
+}
+.introImage {
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: $--clr-green;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.6);
+  div {
+    position: relative !important;
+  }
+  img {
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    position: relative !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+  }
+}
+.dash {
+  width: 50px;
+  height: 6px;
+  display: inline-block;
+  background-color: $--clr-green;
+  margin: 20px 0;
+  -webkit-clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+}
+@media only screen and (min-width: 992px) {
+  .container {
+    margin: 0 100px;
+    .content {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container {
+    margin: 0 200px;
+    .content {
+      grid-template-columns: 3fr 2fr;
+    }
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .container {
+    margin: 0 300px;
+  }
+}
