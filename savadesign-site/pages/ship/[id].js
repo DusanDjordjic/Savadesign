@@ -29,14 +29,16 @@ const Ships = ({ singleItem }) => {
           </div>
           <div className={classes.table}>
             <table>
-              {table.map((item) => {
-                return (
-                  <tr>
-                    <td>{item[0]}</td>
-                    <td>{item[1]}</td>
-                  </tr>
-                );
-              })}
+              <tbody>
+                {table.map((item, index) => {
+                  return (
+                    <tr key={index}>
+                      <td>{item[0]}</td>
+                      <td>{item[1]}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
             </table>
           </div>
         </div>
@@ -56,6 +58,7 @@ export const getStaticProps = (context) => {
     props: {
       singleItem: jsonify(singleItem),
     },
+    revalidate: 3600,
   };
 };
 
@@ -64,6 +67,6 @@ export const getStaticPaths = () => {
     paths: carousel.map((item) => {
       return { params: { id: item._id.toString() } };
     }),
-    fallback: true,
+    fallback: false,
   };
 };

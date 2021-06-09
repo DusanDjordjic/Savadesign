@@ -2,7 +2,7 @@ import Link from "next/link";
 import { carousel } from "../../data/carousel";
 import classes from "./Footer.module.scss";
 import { IoMdArrowDropright } from "react-icons/io";
-const Footer = ({ items }) => {
+const Footer = () => {
   return (
     <footer className={classes.footer}>
       <div className={classes.container}>
@@ -18,9 +18,9 @@ const Footer = ({ items }) => {
         <div>
           <h3>Projects</h3>
           <div className={classes.projectsContainer}>
-            {carousel.map((item) => {
+            {carousel.map((item, index) => {
               return (
-                <Link href={`/ship/${item._id}`}>
+                <Link href={`/ship/${item._id}`} key={index}>
                   <a>
                     {item.title} <IoMdArrowDropright />
                   </a>
