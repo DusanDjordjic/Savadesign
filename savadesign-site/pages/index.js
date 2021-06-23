@@ -29,6 +29,7 @@ const Home = (props) => {
       <Head>
         <title>SavaDesign | Home</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="shotcut icon" type="image/ico" href="/logo.ico" />
       </Head>
       <div className={classes.container}>
         <div className={`${classes.toTop} ${toTop ? classes.topActive : ""}`}>
@@ -44,12 +45,12 @@ const Home = (props) => {
 
             <h2>INVOLVED FROM DESIGN TO DELIVERY</h2>
             <div className={classes.dash}></div>
-            <p>
+            {/* <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Cupiditate qui illum magnam atque odit est voluptatum ratione
               esse, commodi nemo reiciendis ut quod nobis. Dolor deleniti illo
               assumenda nostrum hic.
-            </p>
+            </p> */}
           </div>
           <div className={classes.content}>
             <CardContainer data={props.cards} />
@@ -65,11 +66,10 @@ const Home = (props) => {
           </div>
           <div className={classes.content}>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptate maiores nam dolorem, eius quas voluptatum illum saepe
-              ipsa eaque facere at nesciunt facilis iure perspiciatis fuga,
-              eveniet odit temporibus repellendus itaque aspernatur sit aut
-              veniam dolores dolor! Ducimus, voluptas possimus?
+              Our goal is to constantly shorten the delivery times. Curently we
+              can offer a full hull workshop package for a 110m inland tanker
+              for approx. 4-6 weeks after receiving class documentation, and
+              first units ready for cutting in a week.
             </p>
           </div>
         </div>
@@ -82,11 +82,11 @@ const Home = (props) => {
             <p className={classes.upper}>projects</p>
             <h2>EXPLORE OUR PORTFOLIO</h2>
             <div className={`${classes.dash} ${classes.dashgreen}`}></div>
-            <p>
+            {/* <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Cupiditate qui illum magnam atque odit est voluptatum ratione
               esse.
-            </p>
+            </p> */}
           </div>
           <div className={classes.content}>
             <Carousel data={props.carousel} />
@@ -103,11 +103,11 @@ const Home = (props) => {
             <p className={classes.upper}>contact</p>
             <h2>GET IN TOUCH WITH US</h2>
             <div className={`${classes.dash} ${classes.dashgreen}`}></div>
-            <p>
+            {/* <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Cupiditate qui illum magnam atque odit est voluptatum ratione
               esse.
-            </p>
+            </p> */}
           </div>
           <div className={classes.content}>
             <div className={classes.contactCard}>
@@ -200,7 +200,6 @@ const Home = (props) => {
 export default Home;
 
 export const getStaticProps = () => {
-  console.log(cards);
   return {
     props: {
       cards: jsonify(cards),

@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import classes from "./Navigation.module.scss";
-
+import logoSrc from "../../public/logo.png";
 const Navigation = () => {
   const [navbarActive, setNavbarActive] = useState(false);
   const [navbarToggled, setNavbarToggled] = useState(false);
@@ -29,7 +29,13 @@ const Navigation = () => {
           navbarActive ? classes.active : ""
         }`}
       >
-        <h1>Logo</h1>
+        <Link href="/">
+          <a>
+            <h1>
+              <Image src={logoSrc} alt="Savadesign logo" />
+            </h1>
+          </a>
+        </Link>
         <button
           className={classes.navButton}
           onClick={() => setNavbarToggled(true)}
