@@ -37,7 +37,6 @@
       left: 60px;
       right: 60px;
       background-color: $--clr-white;
-
       text-align: right;
       .closeOverlay {
         background-color: transparent;
@@ -51,10 +50,17 @@
         transition: $--transition;
         &:hover {
           background-color: $--clr-green-darker;
-          color: $--clr-white;
+          button {
+            color: $--clr-white;
+          }
         }
-        a {
-          font-weight: 600;
+        button {
+          cursor: pointer;
+          font-size: $--font-text;
+          font-weight: 500;
+          background-color: transparent;
+          transition: $--transition;
+          border: none;
         }
       }
       .linkActive {

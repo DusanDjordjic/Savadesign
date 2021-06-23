@@ -3,7 +3,7 @@ export const carousel = [
     _id: "1",
     title: "Adora",
     image: "/adora.png",
-    date: new Date(2019, 0, 0),
+    date: new Date(2019, 1, 1),
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis,laborum cumque itaque delectus ea iusto dicta dolorem molestiaeexpedita, sint est. Laborum sequi iure architecto at, temporareprehenderit veniam.",
     table: [
       ["Vessel name", "Adora"],
@@ -19,7 +19,7 @@ export const carousel = [
     _id: "2",
     title: "Dettmer Tank 126",
     image: "/dettmertank126.png",
-    date: new Date(2019, 0, 0),
+    date: new Date(2019, 1, 1),
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis,laborum cumque itaque delectus ea iusto dicta dolorem molestiaeexpedita, sint est. Laborum sequi iure architecto at, temporareprehenderit veniam.",
     table: [
       ["Vessel name", "Dettmer Tank 126"],
@@ -35,7 +35,7 @@ export const carousel = [
     _id: "3",
     title: "GOUWENAAR 2",
     image: "/gouwenaar2.png",
-    date: new Date(),
+    date: new Date(2019, 1, 1),
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis,laborum cumque itaque delectus ea iusto dicta dolorem molestiaeexpedita, sint est. Laborum sequi iure architecto at, temporareprehenderit veniam.",
     table: [
       ["Vessel name", "GOUWENAAR 2"],
@@ -52,7 +52,7 @@ export const carousel = [
     _id: "4",
     title: "La Presta",
     image: "/lapresta.png",
-    date: new Date(),
+    date: new Date(2019, 1, 1),
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis,laborum cumque itaque delectus ea iusto dicta dolorem molestiaeexpedita, sint est. Laborum sequi iure architecto at, temporareprehenderit veniam.",
     table: [
       ["Vessel name", "La Presta"],
@@ -68,7 +68,7 @@ export const carousel = [
     _id: "5",
     title: "THEODELA-L",
     image: "/theodelal.png",
-    date: new Date(),
+    date: new Date(2019, 1, 1),
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis,laborum cumque itaque delectus ea iusto dicta dolorem molestiaeexpedita, sint est. Laborum sequi iure architecto at, temporareprehenderit veniam.",
     table: [
       ["Vessel name", "THEODELA-L"],
@@ -84,7 +84,7 @@ export const carousel = [
     _id: "6",
     title: "TRIPOLIS",
     image: "/tripolis.png",
-    date: new Date(),
+    date: new Date(2019, 1, 1),
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis,laborum cumque itaque delectus ea iusto dicta dolorem molestiaeexpedita, sint est. Laborum sequi iure architecto at, temporareprehenderit veniam.",
     table: [
       ["Vessel name", "TRIPOLIS"],

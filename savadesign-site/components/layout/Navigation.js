@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import classes from "./Navigation.module.scss";
@@ -8,6 +9,9 @@ import logoSrc from "../../public/logo.png";
 const Navigation = () => {
   const [navbarActive, setNavbarActive] = useState(false);
   const [navbarToggled, setNavbarToggled] = useState(false);
+
+  const router = useRouter();
+
   const changeNavbarBackground = () => {
     if (window.scrollY >= 100) {
       setNavbarActive(true);
@@ -21,7 +25,11 @@ const Navigation = () => {
       window.removeEventListener("scroll", changeNavbarBackground);
     };
   });
-
+  const handleClick = (e, link) => {
+    e.preventDefault();
+    setNavbarToggled(false);
+    router.push(link);
+  };
   return (
     <nav>
       <div
@@ -51,29 +59,27 @@ const Navigation = () => {
               <ImCross />
             </button>
             <li>
-              <Link href="/#start" onClick={() => console.log("hi")}>
-                Home
-              </Link>
+              <button onClick={(e) => handleClick(e, "/#start")}>Home</button>
             </li>
             <li>
-              <Link href="/#wwd" onClick={() => setNavbarToggled(false)}>
+              <button onClick={(e) => handleClick(e, "/#wwd")}>
                 What we do
-              </Link>
+              </button>
             </li>
             <li>
-              <Link href="/#hww" onClick={() => setNavbarToggled(false)}>
+              <button onClick={(e) => handleClick(e, "/#hww")}>
                 How we work
-              </Link>
+              </button>
             </li>
             <li>
-              <Link href="/#projects" onClick={() => setNavbarToggled(false)}>
+              <button onClick={(e) => handleClick(e, "/#projects")}>
                 Projects
-              </Link>
+              </button>
             </li>
             <li>
-              <Link href="/#contact" onClick={() => setNavbarToggled(false)}>
+              <button onClick={(e) => handleClick(e, "/#contact")}>
                 Contact
-              </Link>
+              </button>
             </li>
           </div>
         </ul>

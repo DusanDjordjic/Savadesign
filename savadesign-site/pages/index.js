@@ -97,7 +97,7 @@ const Home = (props) => {
         {/* CONTACT */}
         <div
           className={`${classes.contactSec} ${classes.sectionLayout}`}
-          id="projects"
+          id="contact"
         >
           <div className={classes.sectionIntro}>
             <p className={classes.upper}>contact</p>

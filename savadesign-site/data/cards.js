@@ -1,5 +1,3 @@
-import { FaPenNib, FaHandshake } from "react-icons/fa";
-import { BsPeopleFill } from "react-icons/bs";
 export const cards = [
   {
     title: "what we do",
