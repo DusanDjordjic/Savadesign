@@ -51,6 +51,11 @@ const Footer = () => {
               Projects <IoMdArrowDropright />
             </a>
           </Link>
+          <Link href={`/sd-nautilus`}>
+            <a>
+              SD-Nautilus <IoMdArrowDropright />
+            </a>
+          </Link>
           <Link href={`/#contact`}>
             <a>
               Contact <IoMdArrowDropright />

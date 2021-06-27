@@ -1,0 +1,45 @@
+@import "../../../styles/globals/vars.scss";
+.sidebar {
+  font-size: 0.8rem;
+  .group {
+    list-style: none;
+    .groupItem {
+      .textContainer {
+        cursor: pointer;
+        padding: 10px 0px;
+        padding-left: 5px;
+        display: flex;
+        align-items: center;
+
+        .arrow {
+          font-size: 1.5rem;
+          transition: all 0.3s;
+        }
+        .arrowActive {
+          transform: rotate(180deg);
+        }
+        .arrowLink {
+          font-size: 1.5rem;
+          transition: all 0.3s;
+        }
+        &:hover {
+          .arrowLink {
+            transform: translateX(40%);
+          }
+          a {
+            font-weight: 600;
+          }
+        }
+        a {
+          display: flex;
+          align-items: center;
+        }
+      }
+      .textContainerClicked {
+        p {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+@import "./globals/vars.scss";
+.plugin {
+  min-height: 100vh;
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0;
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      min-height: 100vh;
+      .mainContent {
+        padding: 20px;
+        .textBox {
+          h1,
+          h2,
+          h3,
+          p,
+          ul {
+            margin-bottom: 1.25rem;
+          }
+          ul {
+            background-color: $--clr-light-gray;
+            border-left: 5px solid $--clr-green;
+            padding: 10px 40px;
+            list-style: none;
+
+            li {
+              margin: 5px 0;
+              list-style: outside;
+            }
+          }
+        }
+        .imagesBox {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 20px;
+          .imageWrapper {
+            width: 100%;
+
+            div {
+              position: relative !important;
+              padding: 0 !important;
+            }
+            img {
+              width: 100% !important;
+              height: auto !important;
+              margin: 0 !important;
+              position: relative !important;
+              min-width: 0 !important;
+              min-height: 0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 766px) {
+  .plugin {
+    .container {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 992px) {
+  .plugin {
+    .container {
+      .layout {
+        grid-template-columns: 2fr 5fr;
+        .sidebar {
+          border-right: 1px solid black;
+          padding: 5px;
+        }
+        .mainContent {
+          padding: 20px;
+          .imagesBox{
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .plugin {
+    .container {
+      .layout {
+        grid-template-columns: 1fr 5fr;
+        .mainContent {
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
