@@ -77,7 +77,11 @@ const Navigation = () => {
               </button>
             </li>
             <li>
-              <button onClick={(e) => handleClick(e, "/sd-nautilus")}>
+              <button
+                onClick={(e) =>
+                  handleClick(e, "/sd-nautilus/commands/General%20Information")
+                }
+              >
                 SD-Nautilus
               </button>
             </li>
