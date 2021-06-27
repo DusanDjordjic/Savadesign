@@ -51,7 +51,7 @@ const Footer = () => {
               Projects <IoMdArrowDropright />
             </a>
           </Link>
-          <Link href={`/sd-nautilus/commands/General%20Information`}>
+          <Link href={`/sd-nautilus/command/General%20Information`}>
             <a>
               SD-Nautilus <IoMdArrowDropright />
             </a>

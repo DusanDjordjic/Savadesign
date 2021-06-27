@@ -79,7 +79,7 @@ const Navigation = () => {
             <li>
               <button
                 onClick={(e) =>
-                  handleClick(e, "/sd-nautilus/commands/General%20Information")
+                  handleClick(e, "/sd-nautilus/command/General%20Information")
                 }
               >
                 SD-Nautilus
