@@ -8,7 +8,9 @@ import { cards } from "../data/cards";
 import { carousel } from "../data/carousel";
 import { jsonify } from "../middleware/jsonify";
 import { IoIosArrowUp, IoMdMail } from "react-icons/io";
-import { FaPhone, FaLinkedinIn } from "react-icons/fa";
+import { FaPhone, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { AiFillHome } from "react-icons/ai";
+import { RiShipFill } from "react-icons/ri";
 const Home = (props) => {
   const [toTop, setToTop] = useState(false);
   const handleScroll = () => {
@@ -34,7 +36,7 @@ const Home = (props) => {
       <div className={classes.container}>
         <div className={`${classes.toTop} ${toTop ? classes.topActive : ""}`}>
           <Link href="/#start">
-            <IoIosArrowUp />
+            <a><IoIosArrowUp /></a>
           </Link>
         </div>
         <div className={classes.introImg} id="start"></div>
@@ -112,25 +114,25 @@ const Home = (props) => {
           <div className={classes.content}>
             <div className={classes.contactCard}>
               <div className={classes.ccHeader}>
-                <p>Naval architec</p>
+                <p>Owner</p>
               </div>
               <div className={classes.ccText}>
-                <h4>Marko Markovic</h4>
+                <h4>Goran Budečević</h4>
                 <ul>
                   <li>
                     <p>
-                      <IoMdMail /> example@gmail.com
+                      <IoMdMail /> gbudecevic@yahoo.com
                     </p>
                   </li>
                   <li>
                     <p>
-                      <FaPhone /> +38161-234-56-54
+                      <FaPhone /> + 381-64-309-45-43
                     </p>
                   </li>
                 </ul>
               </div>
               <div className={classes.ccFooter}>
-                <Link href="https://www.linkedin.com/feed/">
+                <Link href="https://www.linkedin.com/company/savadesign-d-o-o/">
                   <a>
                     <FaLinkedinIn />
                   </a>
@@ -139,57 +141,54 @@ const Home = (props) => {
             </div>
             <div className={classes.contactCard}>
               <div className={classes.ccHeader}>
-                <p>Naval architec</p>
+                <p>Office</p>
               </div>
               <div className={classes.ccText}>
-                <h4>Marko Markovic</h4>
+                <h4>Sremska Mitrovica, Serbia</h4>
                 <ul>
                   <li>
-                    <p>
-                      <IoMdMail /> example@gmail.com
-                    </p>
+                  <AiFillHome/> Svetog dimitrija 19G lokal 2,  22000
                   </li>
                   <li>
-                    <p>
-                      <FaPhone /> +38161-234-56-54
-                    </p>
+                  <IoMdMail /> office@savadesign.net
                   </li>
+
                 </ul>
               </div>
               <div className={classes.ccFooter}>
-                <Link href="https://www.linkedin.com/feed/">
-                  <a>
-                    <FaLinkedinIn />
-                  </a>
-                </Link>
+                
               </div>
             </div>
-            <div className={classes.contactCard}>
+            <div className={`${classes.contactCard} ${classes.contactCardLinks}`}>
               <div className={classes.ccHeader}>
-                <p>Naval architec</p>
+                <p>External Links</p>
               </div>
               <div className={classes.ccText}>
-                <h4>Marko Markovic</h4>
                 <ul>
                   <li>
-                    <p>
-                      <IoMdMail /> example@gmail.com
-                    </p>
+                    <Link href="https://www.youtube.com/channel/UCFUbgpf3MGoxatBDNvV82dQ">
+                      <a>
+                      <FaYoutube /> Youtube
+                      </a>
+                    </Link>
                   </li>
                   <li>
-                    <p>
-                      <FaPhone /> +38161-234-56-54
-                    </p>
+                  <Link href="https://www.linkedin.com/company/savadesign-d-o-o/">
+                      <a>
+                      <FaLinkedinIn /> Linkedin
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                  <Link href="https://www.food4rhino.com/en/app/sdnautilus">
+                      <a>
+                      <RiShipFill /> Food4Rhino
+                      </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
-              <div className={classes.ccFooter}>
-                <Link href="https://www.linkedin.com/feed/">
-                  <a>
-                    <FaLinkedinIn />
-                  </a>
-                </Link>
-              </div>
+              
             </div>
           </div>
         </div>

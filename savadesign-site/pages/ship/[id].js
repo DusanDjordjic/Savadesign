@@ -5,7 +5,8 @@ import classes from "../../styles/SingleShip.module.scss";
 import Image from "next/image";
 import { useRouter } from "next/router";
 const Ships = ({ singleItem }) => {
-  const { title, text, image, date, table } = singleItem;
+  const { title, text, image, table } = singleItem;
+  console.log(text);
   const router = useRouter();
   return (
     <>
@@ -15,7 +16,6 @@ const Ships = ({ singleItem }) => {
       </Head>
       <div className={classes.container}>
         <div className={classes.header}>
-          <p>{date.slice(0, 4)}</p>
           <h1>{title}</h1>
           <div className={classes.dash}></div>
         </div>

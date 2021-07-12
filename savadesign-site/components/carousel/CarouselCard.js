@@ -11,8 +11,7 @@ const CarouselCard = ({ data }) => {
         </div>
         <div className={classes.cardText}>
           <h4>{data.title}</h4>
-          <p className={classes.date}>{data.date.slice(0, 4)}</p>
-          <p>{data.text}</p>
+          <p>{data.text.slice(0, 100)}...</p>
         </div>
         <div className={classes.cardFooter}>
           <Link href={`/ship/${data._id}`}>

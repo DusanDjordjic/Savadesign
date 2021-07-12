@@ -4,12 +4,12 @@
   .container {
     width: 100%;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 92px 0;
     .layout {
       display: grid;
       grid-template-columns: 1fr;
-      min-height: 100vh;
       .mainContent {
+        min-height: 100vh;
         padding: 20px;
         .textBox {
           h1,
@@ -53,8 +53,29 @@
           }
         }
       }
+      button{
+
+        font-size: $--font-h3;
+        cursor: pointer;
+        background-color: $--clr-light-gray;
+        border: 1px solid $--clr-black-04;
+        transition: $--transition;
+        &:hover{
+          background-color: $--clr-green;
+        }
+      }
     }
   }
+}
+.sidebar{
+  
+  overflow: hidden;
+}
+.sidebarActive{
+ height: auto;
+}
+.sidebarNotActive{
+  height: 0;
 }
 @media only screen and (min-width: 766px) {
   .plugin {
@@ -73,12 +94,16 @@
         .sidebar {
           border-right: 1px solid black;
           padding: 5px;
+          height: auto!important;
         }
         .mainContent {
           padding: 20px;
           .imagesBox{
             grid-template-columns: 1fr 1fr;
           }
+        }
+        button{
+          display: none;
         }
       }
     }

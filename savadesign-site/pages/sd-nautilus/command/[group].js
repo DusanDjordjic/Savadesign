@@ -17,8 +17,11 @@ const Command = ({ commands, text, images }) => {
       <div className={classes.plugin}>
         <div className={classes.container}>
           <div className={classes.layout}>
-            <div className={classes.sidebar}>
-              <Sidebar commands={commands} />
+          <button onClick={() => {setIsSidebarActive(!isSidebarActive)}}>Navigation</button>
+            <div className={isSidebarActive ? `${classes.sidebarActive} ${classes.sidebar}` : `${classes.sidebar} ${classes.sidebarNotActive}`}>
+            
+            <Sidebar commands={commands}/>
+            
             </div>
 
             <div className={classes.mainContent}>
