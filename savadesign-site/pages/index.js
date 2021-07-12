@@ -11,6 +11,7 @@ import { IoIosArrowUp, IoMdMail } from "react-icons/io";
 import { FaPhone, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { AiFillHome } from "react-icons/ai";
 import { RiShipFill } from "react-icons/ri";
+import FloatingLinks from '../components/floatingLinks/FloatingLinks'
 const Home = (props) => {
   const [toTop, setToTop] = useState(false);
   const handleScroll = () => {
@@ -155,44 +156,13 @@ const Home = (props) => {
 
                 </ul>
               </div>
-              <div className={classes.ccFooter}>
-                
-              </div>
-            </div>
-            <div className={`${classes.contactCard} ${classes.contactCardLinks}`}>
-              <div className={classes.ccHeader}>
-                <p>External Links</p>
-              </div>
-              <div className={classes.ccText}>
-                <ul>
-                  <li>
-                    <Link href="https://www.youtube.com/channel/UCFUbgpf3MGoxatBDNvV82dQ">
-                      <a>
-                      <FaYoutube /> Youtube
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                  <Link href="https://www.linkedin.com/company/savadesign-d-o-o/">
-                      <a>
-                      <FaLinkedinIn /> Linkedin
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                  <Link href="https://www.food4rhino.com/en/app/sdnautilus">
-                      <a>
-                      <RiShipFill /> Food4Rhino
-                      </a>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              
+              <div className={classes.ccFooter}></div>
             </div>
           </div>
         </div>
       </div>
+
+      <FloatingLinks/>
     </>
   );
 };
