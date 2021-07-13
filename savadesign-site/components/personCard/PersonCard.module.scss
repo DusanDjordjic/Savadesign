@@ -28,19 +28,13 @@
   .name {
     font-weight: 600;
     font-size: 1.2rem;
-    margin: 1rem 0;
+    margin-top: 1rem;
   }
   .position {
-    padding: 5px 10px;
-    background-color: $--clr-black;
-    color: $--clr-green;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    border-radius: 5px;
+    color: $--clr-black;
+    margin-bottom: 1rem;
   }
   .footer {
-    padding: 10px 0;
     color: $--clr-gray;
     border-top: 1px solid $--clr-gray;
     p {
@@ -75,13 +69,15 @@
   .finalLink {
     border-top: 1px solid $--clr-black-04;
     a {
-      display: block;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       padding: 15px;
       transition: $--transition;
+      color: $--clr-gray;
       &:hover {
-        background-color: $--clr-black;
-        color: $--clr-green-darker;
+        background-color: $--clr-white-02;
+        color: $--clr-green;
       }
       svg {
         font-size: $--font-h3;

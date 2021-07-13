@@ -1,10 +1,10 @@
 @import "../../styles/globals/vars.scss";
 .container {
   display: grid;
+  margin-top: 90px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   aspect-ratio: 1 / 1;
-
   gap: 2px;
   .image1 {
     grid-column: 1 / 2;
@@ -51,14 +51,11 @@
     transition: $--transition;
     &:hover {
       filter: grayscale(0);
-      a {
-        opacity: 1;
-      }
     }
     a {
       background-color: $--clr-black-04;
       color: $--clr-white;
-      opacity: 0;
+      opacity: 1;
       position: absolute;
       display: flex;
       align-items: center;
@@ -70,6 +67,26 @@
       bottom: 0;
       z-index: 10;
       transition: $--transition;
+      h2 {
+        font-size: $--font-text;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    margin-top: 0px;
+    .image1,
+    .image2,
+    .image3,
+    .image4,
+    .image5 {
+      a {
+        h2 {
+          font-size: $--font-h2;
+        }
+      }
     }
   }
 }
