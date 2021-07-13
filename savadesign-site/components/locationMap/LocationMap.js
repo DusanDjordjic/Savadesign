@@ -29,7 +29,7 @@ const LocationMap = ({ displayMessageBox }) => {
     });
     const data = await response.json();
     if (data.error) {
-      displayMessageBox("Something went wrong");
+      displayMessageBox(data.error);
     } else {
       displayMessageBox(data.msg);
     }

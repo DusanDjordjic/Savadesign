@@ -125,15 +125,10 @@ const Home = (props) => {
             <p className={classes.upper}>contact</p>
             <h2>GET IN TOUCH WITH US</h2>
             <div className={`${classes.dash} ${classes.dashgreen}`}></div>
-            {/* <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Cupiditate qui illum magnam atque odit est voluptatum ratione
-              esse.
-            </p> */}
           </div>
           <div className={classes.content}>
             <PersonCard displayMessageBox={displayMessageBox} />
-            <LocationMap displayMessageBox={displayMessageBox}/>
+            <LocationMap displayMessageBox={displayMessageBox} />
           </div>
         </div>
       </div>
