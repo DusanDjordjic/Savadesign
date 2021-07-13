@@ -50,10 +50,15 @@
       border-left: 3px solid transparent;
       padding: 5px 10px;
       text-align: left;
+      position: relative;
       transition: $--transition;
       svg {
         margin-right: 10px;
         display: block;
+      }
+      .copyIcon {
+        position: absolute;
+        right: 10px;
       }
       &:hover {
         color: $--clr-green;

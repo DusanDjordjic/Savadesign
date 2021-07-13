@@ -8,7 +8,6 @@ import { cards } from "../data/cards";
 import { carousel } from "../data/carousel";
 import { jsonify } from "../middleware/jsonify";
 import { IoIosArrowUp } from "react-icons/io";
-import { AiFillHome } from "react-icons/ai";
 import FloatingLinks from "../components/floatingLinks/FloatingLinks";
 import IntroGrid from "../components/IntroGrid/introgrid";
 import PersonCard from "../components/personCard/PersonCard";
@@ -134,15 +133,8 @@ const Home = (props) => {
           </div>
           <div className={classes.content}>
             <PersonCard displayMessageBox={displayMessageBox} />
-            <LocationMap />
+            <LocationMap displayMessageBox={displayMessageBox}/>
           </div>
-        </div>
-
-        <div className={`${classes.ownerSec} ${classes.sectionLayout}`}>
-          <div className={classes.content}></div>
-        </div>
-        <div className={`${classes.mapSec} ${classes.sectionLayout}`}>
-          <div className={classes.content}></div>
         </div>
       </div>
 

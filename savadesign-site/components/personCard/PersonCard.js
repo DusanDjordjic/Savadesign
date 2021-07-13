@@ -2,6 +2,7 @@ import classes from "./PersonCard.module.scss";
 import Image from "next/image";
 import src from "../../public/people/owner.png";
 import { IoMdMail } from "react-icons/io";
+import { FiCopy } from "react-icons/fi";
 import { FaPhone, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 const PersonCard = ({ displayMessageBox }) => {
@@ -18,10 +19,10 @@ const PersonCard = ({ displayMessageBox }) => {
       <p className={classes.position}>Owner</p>
       <div className={classes.footer}>
         <p title="Copy to clipboard" onClick={(e) => copyToClipboard(e)}>
-          <IoMdMail /> gbudecevic@yahoo.com
+          <IoMdMail /> gbudecevic@yahoo.com <FiCopy className={classes.copyIcon}/>
         </p>
         <p title="Copy to clipboard" onClick={(e) => copyToClipboard(e)}>
-          <FaPhone /> +381-64-309-45-43
+          <FaPhone /> +381-64-309-45-43 <FiCopy className={classes.copyIcon}/>
         </p>
       </div>
       <div className={classes.finalLink}>

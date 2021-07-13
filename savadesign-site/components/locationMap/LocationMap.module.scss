@@ -1,3 +1,71 @@
+@import "../../styles/globals/vars.scss";
 .container {
+  margin-top: 40px;
   width: 100%;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: $--clr-white-01;
+  gap: 30px;
+  iframe {
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 100%;
+  }
+  .contactForm {
+    padding: 20px;
+    h4,
+    p {
+      margin-bottom: 10px;
+    }
+    h4 {
+      font-size: $--font-h2;
+    }
+    .inputGroup {
+      margin-bottom: 20px;
+      p {
+        font-size: 0.8rem;
+        span {
+          color: red;
+        }
+      }
+      input {
+        width: 100%;
+        border: 1px solid $--clr-gray;
+        padding: 5px;
+        &:focus-within {
+          outline: none;
+          border: 1px solid $--clr-green-darker;
+        }
+      }
+      textarea {
+        display: block;
+        width: 100% !important;
+        min-height: 100px !important;
+        resize: none;
+        &:focus-within {
+          outline: none;
+          border: 1px solid $--clr-green;
+        }
+      }
+      button {
+        padding: 10px 20px;
+        background-color: $--clr-green-darker;
+
+        color: $--clr-white;
+        font-weight: 500;
+        border: none;
+        transition: $--transition;
+        &:hover {
+          background-color: $--clr-green;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
