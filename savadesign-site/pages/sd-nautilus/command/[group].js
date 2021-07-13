@@ -6,6 +6,9 @@ import Image from "next/image";
 import { commands } from "../../../data/commands";
 import { useEffect, useState } from "react";
 const Command = ({ commands, text, images }) => {
+  const closeSideBar = () => {
+    setIsSidebarActive(false);
+  };
   const [isSidebarActive, setIsSidebarActive] = useState(false);
   return (
     <>
@@ -17,11 +20,24 @@ const Command = ({ commands, text, images }) => {
       <div className={classes.plugin}>
         <div className={classes.container}>
           <div className={classes.layout}>
-          <button onClick={() => {setIsSidebarActive(!isSidebarActive)}}>Navigation</button>
-            <div className={isSidebarActive ? `${classes.sidebarActive} ${classes.sidebar}` : `${classes.sidebar} ${classes.sidebarNotActive}`}>
-            
-            <Sidebar commands={commands}/>
-            
+            <button
+              onClick={() => {
+                setIsSidebarActive(!isSidebarActive);
+              }}
+            >
+              Navigation
+            </button>
+            <div
+              className={
+                isSidebarActive
+                  ? `${classes.sidebarActive} ${classes.sidebar}`
+                  : `${classes.sidebar} ${classes.sidebarNotActive}`
+              }
+            >
+              <Sidebar
+                commands={commands}
+                closeSideBar={() => setIsSidebarActive(false)}
+              />
             </div>
 
             <div className={classes.mainContent}>

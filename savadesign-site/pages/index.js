@@ -7,13 +7,21 @@ import Carousel from "../components/carousel/Carousel";
 import { cards } from "../data/cards";
 import { carousel } from "../data/carousel";
 import { jsonify } from "../middleware/jsonify";
-import { IoIosArrowUp, IoMdMail } from "react-icons/io";
-import { FaPhone, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { IoIosArrowUp } from "react-icons/io";
 import { AiFillHome } from "react-icons/ai";
-import { RiShipFill } from "react-icons/ri";
-import FloatingLinks from '../components/floatingLinks/FloatingLinks'
+import FloatingLinks from "../components/floatingLinks/FloatingLinks";
+import IntroGrid from "../components/IntroGrid/introgrid";
+import PersonCard from "../components/personCard/PersonCard";
+import MessageBox from "../components/layout/MessageBox";
+import LocationMap from "../components/locationMap/LocationMap";
 const Home = (props) => {
   const [toTop, setToTop] = useState(false);
+  const [msgBox, setMsgBox] = useState(false);
+  const [msgText, setMsgText] = useState("");
+  const displayMessageBox = (text) => {
+    setMsgBox(true);
+    setMsgText(text);
+  };
   const handleScroll = () => {
     if (window.scrollY >= 500) {
       setToTop(true);
@@ -27,6 +35,14 @@ const Home = (props) => {
       window.removeEventListener("scroll", handleScroll);
     };
   });
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setMsgBox(false);
+    }, 3000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [msgBox]);
   return (
     <>
       <Head>
@@ -37,10 +53,14 @@ const Home = (props) => {
       <div className={classes.container}>
         <div className={`${classes.toTop} ${toTop ? classes.topActive : ""}`}>
           <Link href="/#start">
-            <a><IoIosArrowUp /></a>
+            <a>
+              <IoIosArrowUp />
+            </a>
           </Link>
         </div>
-        <div className={classes.introImg} id="start"></div>
+        <div id="start">
+          <IntroGrid />
+        </div>
         {/* WHAT WE DO */}
         <div className={`${classes.wwdSec} ${classes.sectionLayout}`} id="wwd">
           <div className={classes.sectionIntro}>
@@ -113,56 +133,21 @@ const Home = (props) => {
             </p> */}
           </div>
           <div className={classes.content}>
-            <div className={classes.contactCard}>
-              <div className={classes.ccHeader}>
-                <p>Owner</p>
-              </div>
-              <div className={classes.ccText}>
-                <h4>Goran Budečević</h4>
-                <ul>
-                  <li>
-                    <p>
-                      <IoMdMail /> gbudecevic@yahoo.com
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <FaPhone /> + 381-64-309-45-43
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <div className={classes.ccFooter}>
-                <Link href="https://www.linkedin.com/company/savadesign-d-o-o/">
-                  <a>
-                    <FaLinkedinIn />
-                  </a>
-                </Link>
-              </div>
-            </div>
-            <div className={classes.contactCard}>
-              <div className={classes.ccHeader}>
-                <p>Office</p>
-              </div>
-              <div className={classes.ccText}>
-                <h4>Sremska Mitrovica, Serbia</h4>
-                <ul>
-                  <li>
-                  <AiFillHome/> Svetog dimitrija 19G lokal 2,  22000
-                  </li>
-                  <li>
-                  <IoMdMail /> office@savadesign.net
-                  </li>
-
-                </ul>
-              </div>
-              <div className={classes.ccFooter}></div>
-            </div>
+            <PersonCard displayMessageBox={displayMessageBox} />
+            <LocationMap />
           </div>
+        </div>
+
+        <div className={`${classes.ownerSec} ${classes.sectionLayout}`}>
+          <div className={classes.content}></div>
+        </div>
+        <div className={`${classes.mapSec} ${classes.sectionLayout}`}>
+          <div className={classes.content}></div>
         </div>
       </div>
 
-      <FloatingLinks/>
+      <FloatingLinks />
+      <MessageBox visible={msgBox} text={msgText} />
     </>
   );
 };

@@ -10,6 +10,6 @@ export const cards = [
   {
     title: "SD_NAUTILUS",
     text: "In order to meet challenges of the modern market we developed our custom tools for achieving the level of efficiency that allows us to offer a full hull workshop package for a 110m inland tanker for approx. 4-6 weeks. We created Rhino plugin with over 160 commands that covers everyday tasks from hull modeling to delivering complete production information.",
-    link: "/sdnautilus",
+    link: "/sd-nautilus/command/General%20Information",
   },
 ];

@@ -2,7 +2,7 @@ export const carousel = [
   {
     _id: "1",
     title: "Inland Chemical Tanker",
-    image: "/adora.png",
+    image: "/dettmertank126.png",
     text: "Inland chemical tankers are the most common inland vessels type for us in the recent years. Ranging in size from 86m x 9.6m to 135m x 17m, both normal steel and stainless steel. We took part in basic design, in designing the hull form, producing Class documentation as well as workshop documentation.",
     table: [
       ["Vessel name", "Adora"],
@@ -63,7 +63,7 @@ export const carousel = [
   {
     _id: "5",
     title: "Dry Cargo Vessel",
-    image: "/theodelal.png",
+    image: "/dettmertank126.png",
     text: "",
     table: [
       ["Vessel name", "THEODELA-L"],
@@ -78,7 +78,7 @@ export const carousel = [
   {
     _id: "6",
     title: "Pusher",
-    image: "/tripolis.png",
+    image: "/dettmertank126.png",
     text: "",
     table: [
       ["Vessel name", "TRIPOLIS"],
@@ -93,7 +93,7 @@ export const carousel = [
   {
     _id: "7",
     title: "Passenger Ship",
-    image: "/tripolis.png",
+    image: "/dettmertank126.png",
     text: "",
     table: [
       ["Vessel name", "TRIPOLIS"],
@@ -108,7 +108,7 @@ export const carousel = [
   {
     _id: "8",
     title: "Pontoon",
-    image: "/tripolis.png",
+    image: "/dettmertank126.png",
     text: "",
     table: [
       ["Vessel name", "TRIPOLIS"],
@@ -123,7 +123,7 @@ export const carousel = [
   {
     _id: "9",
     title: "Barge",
-    image: "/tripolis.png",
+    image: "/dettmertank126.png",
     text: "",
     table: [
       ["Vessel name", "TRIPOLIS"],
@@ -138,7 +138,7 @@ export const carousel = [
   {
     _id: "10",
     title: "Workboat",
-    image: "/tripolis.png",
+    image: "/dettmertank126.png",
     text: "",
     table: [
       ["Vessel name", "TRIPOLIS"],
@@ -153,7 +153,7 @@ export const carousel = [
   {
     _id: "11",
     title: "Dredger",
-    image: "/tripolis.png",
+    image: "/dettmertank126.png",
     text: "",
     table: [
       ["Vessel name", "TRIPOLIS"],
@@ -168,7 +168,7 @@ export const carousel = [
   {
     _id: "12",
     title: "Workboat",
-    image: "/tripolis.png",
+    image: "/dettmertank126.png",
     text: "",
     table: [
       ["Vessel name", "TRIPOLIS"],
@@ -183,7 +183,7 @@ export const carousel = [
   {
     _id: "13",
     title: "“Special Purpose” Vessel",
-    image: "/tripolis.png",
+    image: "/dettmertank126.png",
     text: "",
     table: [
       ["Vessel name", "TRIPOLIS"],

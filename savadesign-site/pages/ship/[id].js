@@ -6,7 +6,6 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 const Ships = ({ singleItem }) => {
   const { title, text, image, table } = singleItem;
-  console.log(text);
   const router = useRouter();
   return (
     <>

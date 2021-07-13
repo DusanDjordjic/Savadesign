@@ -9,10 +9,14 @@ const Footer = () => {
         <div>
           <h3>SavaDesign</h3>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio
-            explicabo obcaecati distinctio quam, corrupti quod reiciendis eum
-            ab. Ducimus ipsa dolor amet nihil commodi repellat, corporis esse
-            ullam cupiditate totam.
+            SavaDesign is regional lider in delivering advanced ship design,
+            Class and workshop documentation. We combine human exeprience whit
+            the latest tehnology. All our project are done as accurate
+            (production level) 3D solid models which allows our customers to
+            have insight in all aspects of the design checking even smallest
+            details of construction. 3D solid model also provides information
+            about weight and material specifications which are important in
+            early stages of ship design.
           </p>
         </div>
         <div>

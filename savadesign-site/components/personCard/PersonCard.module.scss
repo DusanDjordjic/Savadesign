@@ -1,0 +1,86 @@
+@import "../../styles/globals/vars.scss";
+.personCard {
+  padding-top: 30px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  background-color: $--clr-white-01;
+  .imageBox {
+    margin: 0 auto;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+
+    border: 1px solid $--clr-green;
+    width: 50%;
+
+    img {
+      border-radius: 100%;
+    }
+  }
+  p {
+    font-weight: 400;
+    text-align: center;
+  }
+  .name {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+  .position {
+    padding: 5px 10px;
+    background-color: $--clr-black;
+    color: $--clr-green;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    border-radius: 5px;
+  }
+  .footer {
+    padding: 10px 0;
+    color: $--clr-gray;
+    border-top: 1px solid $--clr-gray;
+    p {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      border-left: 3px solid transparent;
+      padding: 5px 10px;
+      text-align: left;
+      transition: $--transition;
+      svg {
+        margin-right: 10px;
+        display: block;
+      }
+      &:hover {
+        color: $--clr-green;
+        border-left: 3px solid $--clr-green;
+        background-color: $--clr-white-02;
+      }
+    }
+    h4 {
+      color: $--clr-black;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+  .finalLink {
+    border-top: 1px solid $--clr-black-04;
+    a {
+      display: block;
+      text-align: center;
+      padding: 15px;
+      transition: $--transition;
+      &:hover {
+        background-color: $--clr-black;
+        color: $--clr-green-darker;
+      }
+      svg {
+        font-size: $--font-h3;
+      }
+    }
+  }
+}

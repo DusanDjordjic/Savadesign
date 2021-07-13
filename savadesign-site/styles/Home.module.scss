@@ -1,4 +1,5 @@
 @import "./globals/vars.scss";
+
 .container {
   background-color: $--clr-white;
   .toTop {
@@ -13,9 +14,7 @@
     padding: 7px;
     transform: translateX(200px);
     transition: $--transition;
-    &:hover {
-      animation: toTopSlide 1s ease-in infinite;
-    }
+
     svg {
       display: block;
     }
@@ -23,13 +22,7 @@
   .topActive {
     transform: translateX(0);
   }
-  .introImg {
-    background-image: url("../public/introImg1.jpg");
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    min-height: 100vh;
-  }
+
   .sectionLayout {
     position: relative;
     padding: 100px 10px;
@@ -96,9 +89,10 @@
   .contactSec {
     .content {
       padding: 20px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
       .contactCard {
         border-radius: 10px;
         overflow: hidden;
@@ -112,7 +106,6 @@
             background-color: $--clr-green-darker;
             color: $--clr-white;
           }
-          
         }
         .ccText {
           padding: 0 10px;
@@ -129,8 +122,8 @@
             li {
               min-width: 100%;
               margin-bottom: 10px;
-              a{
-                &:hover{
+              a {
+                &:hover {
                   text-decoration: underline;
                 }
               }
@@ -154,10 +147,17 @@
           }
         }
       }
-      .contactCardLinks{
+      .contactCardLinks {
         grid-column: 1/3;
-        
       }
+    }
+  }
+  .ownerSec {
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
     }
   }
 }
@@ -234,13 +234,4 @@
 }
 .dashgreen {
   background-color: $--clr-green;
-}
-
-@keyframes toTopSlide {
-  0% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-60%);
-  }
 }

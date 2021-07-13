@@ -1,22 +1,27 @@
 import { useState } from "react";
 import classes from "./Sidebar.module.scss";
 import { IoMdArrowDropdown, IoMdArrowDropright } from "react-icons/io";
-
 import Link from "next/link";
-const Sidebar = ({ commands }) => {
+import { useRouter } from "next/router";
+const Sidebar = ({ commands, closeSideBar }) => {
   return (
     <div className={classes.sidebar}>
       <div className={classes.dropdown}>
-        <Group nizItema={commands} />
+        <Group nizItema={commands} closeSideBar={closeSideBar} />
       </div>
     </div>
   );
 };
 
-const Group = ({ nizItema }) => {
+const Group = ({ nizItema, closeSideBar }) => {
   // Dobijem niz objekata
   // Svaki objekat ima title, children, depth
-
+  const router = useRouter();
+  const handleClick = (e, link) => {
+    e.preventDefault();
+    router.push(link);
+    closeSideBar();
+  };
   return (
     <ul className={classes.group}>
       {/* Prolazim kroz niz i za svaki item gledam
@@ -24,7 +29,14 @@ const Group = ({ nizItema }) => {
       i u njemu novu grupu */}
       {nizItema.map((item, index) => {
         if (item.children)
-          return <GroupChild item={item} key={index} index={index} />;
+          return (
+            <GroupChild
+              item={item}
+              key={index}
+              index={index}
+              closeSideBar={closeSideBar}
+            />
+          );
 
         return (
           <li
@@ -33,8 +45,8 @@ const Group = ({ nizItema }) => {
             style={{ marginLeft: 20 }}
           >
             <div className={classes.textContainer}>
-              <Link href={item.title}>
-                <a>
+              <Link href={`/sd-nautilus/command/${item.title}`}>
+                <a onClick={(e) => handleClick(e, item.title)}>
                   {item.title}
                   <IoMdArrowDropright className={classes.arrowLink} />
                 </a>
@@ -47,7 +59,7 @@ const Group = ({ nizItema }) => {
   );
 };
 
-const GroupChild = ({ item, index }) => {
+const GroupChild = ({ item, index, closeSideBar }) => {
   const [isChildrenOpen, setIsChildrenOpen] = useState(false);
   return (
     <li
@@ -78,7 +90,13 @@ const GroupChild = ({ item, index }) => {
         />
         <p>{item.title}</p>
       </div>
-      {isChildrenOpen && <Group nizItema={item.children} isActive={true} />}
+      {isChildrenOpen && (
+        <Group
+          nizItema={item.children}
+          isActive={true}
+          closeSideBar={closeSideBar}
+        />
+      )}
     </li>
   );
 };

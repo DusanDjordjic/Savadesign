@@ -1,0 +1,15 @@
+@import "../../styles/globals/vars.scss";
+.msgBox {
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.6);
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%) translateY(200px);
+  background-color: $--clr-green;
+  transition: $--transition;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.visible {
+  transform: translateX(-50%) translateY(0px);
+}

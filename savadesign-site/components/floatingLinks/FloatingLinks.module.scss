@@ -1,64 +1,64 @@
-@import '../../styles/globals/vars.scss';
-.floatingLinksContainer{
-    position: fixed;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    
-    ul{
-        list-style: none;
-        transition: $--transition;
-        li{
-            margin: 10px 0;
-            border-radius: 100px;
-            background-color: red;
-            border: 1px solid #fff;
-            a{
-                height: 50px;
-                width: 50px;
-                display: block;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 24px;
-            }
-        }
-        .linkedin{
-            background-color: #0e76a8;
-            color: #fff;
-        }
-        .youtube{
-            background-color: #e62117;
-            color: #fff;
-        }
-        .food{
-            background-color: $--clr-green;
-        }
-    }
-    .activeUl{
-        transform: translateX(0px);
-    }
-    .inactiveUl{
-        transform: translateX(-100px);
-    }
-    button{
-        cursor: pointer;
-        padding: 5px;
-        border-radius: 100px;
-        background-color: $--clr-black-04;
-        text-align: center;
+@import "../../styles/globals/vars.scss";
+.floatingLinksContainer {
+  position: fixed;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  ul {
+    list-style: none;
+    transition: $--transition;
+    li {
+      margin: 10px 0;
+      border-radius: 100px;
+      background-color: red;
+      border: 1px solid #fff;
+      a {
+        height: 50px;
+        width: 50px;
+        display: block;
+        display: flex;
+        align-items: center;
         justify-content: center;
-        border: none;
-        font-size: 20px;
-        transition: $--transition;
-        svg{
-            display: block;
-        }
+        font-size: 24px;
+      }
     }
-    .activeButton{
-        transform: rotate(180deg);
+    .linkedin {
+      background-color: #0e76a8;
+      color: #fff;
     }
-    .inactiveButton{
-        transform: rotate(0deg);
+    .youtube {
+      background-color: #e62117;
+      color: #fff;
     }
+    .food {
+      background-color: $--clr-green;
+    }
+  }
+  .activeUl {
+    transform: translateX(0px);
+  }
+  .inactiveUl {
+    transform: translateX(-100px);
+  }
+  button {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 100px;
+    background-color: $--clr-black-04;
+    text-align: center;
+    justify-content: center;
+    border: none;
+    font-size: 20px;
+    transition: $--transition;
+    svg {
+      display: block;
+    }
+  }
+  .activeButton {
+    transform: rotate(180deg);
+  }
+  .inactiveButton {
+    transform: rotate(0deg);
+  }
 }
