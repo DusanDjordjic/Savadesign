@@ -1,0 +1,80 @@
+@import "../../styles/globals/vars.scss";
+.slider {
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    .overlay {
+      padding: 30px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1;
+      button {
+        opacity: 0.7;
+        box-shadow: 0 0 5px 0 rgba($--clr-green, $alpha: 0.3);
+        background-color: $--clr-white;
+        border: none;
+        padding: 10px;
+        border-radius: 100px;
+        transition: all 0.3s;
+        &:hover {
+          background-color: $--clr-green;
+          transform: scale(1.05);
+        }
+        svg {
+          display: block;
+          font-size: 20px;
+        }
+      }
+    }
+    .imageWrapper {
+      border-radius: 15px;
+      position: absolute;
+      overflow: hidden;
+      opacity: 0;
+      width: 100%;
+      transition: all 0.3s;
+      div {
+        position: unset !important;
+        .image {
+          object-fit: contain;
+          width: 100% !important;
+          position: relative !important;
+          height: unset !important;
+        }
+      }
+    }
+    .imageWrapper.active {
+      opacity: 1;
+    }
+  }
+  .dotConatiner {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    .dot {
+      box-shadow: 0 0 5px 0 rgba($--clr-green, $alpha: 0.7);
+      margin: 0 5px;
+      min-width: 15px;
+      min-height: 15px;
+      border-radius: 100px;
+      background-color: $--clr-white;
+      padding: 3px;
+      border: 1px solid $--clr-green;
+      transition: all 0.3s;
+      &:hover {
+        background-color: $--clr-green;
+      }
+    }
+    .dot.active {
+      margin: 0 20px;
+      background-color: $--clr-green;
+    }
+  }
+}
