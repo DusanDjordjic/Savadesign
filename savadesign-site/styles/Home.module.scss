@@ -53,6 +53,9 @@
   }
   .wwdSec {
     background-color: $--clr-green;
+    .content {
+      padding: 20px;
+    }
   }
   .hwwSec {
     background-color: $--clr-white;

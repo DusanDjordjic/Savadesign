@@ -4,7 +4,7 @@ import Head from "next/dist/next-server/lib/head";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 import { commands } from "../../../data/commands";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const Command = ({ commands, text, images }) => {
   const closeSideBar = () => {
     setIsSidebarActive(false);

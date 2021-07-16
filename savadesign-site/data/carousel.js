@@ -80,7 +80,7 @@ export const carousel = [
   },
   {
     _id: "13",
-    title: "Refit/Reconversion/Repairs",
+    title: "Refit / Reconversion / Repairs",
     image: ["/grid/image2.png"],
     text: "Besides new-buildings, we took part in some tanker reconversions ( single hull to double hull ), purpose conversions, repair works after suffering major damage, ship extensions...",
   },

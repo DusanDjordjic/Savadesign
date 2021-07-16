@@ -20,15 +20,13 @@ const Ships = ({ singleItem }) => {
           <div className={classes.dash}></div>
         </div>
         <div className={classes.introImage}>
-          <ImageSlider images={image}/>
-          <Image src={image[0]} layout="fill" />
+          <ImageSlider images={image} />
         </div>
         <div className={classes.content}>
           <div className={classes.text}>
             <p>{text}</p>
             <button onClick={() => router.push("/#projects")}>Back</button>
           </div>
-          
         </div>
       </div>
     </>
