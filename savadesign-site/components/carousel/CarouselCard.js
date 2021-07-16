@@ -7,11 +7,11 @@ const CarouselCard = ({ data }) => {
     <div className={classes.wrapper}>
       <div className={classes.carouselCard}>
         <div className={classes.projectImg}>
-          <Image src={data.image} layout="fill" />
+          <Image src={data.image[0]} layout="fill" />
         </div>
         <div className={classes.cardText}>
           <h4>{data.title}</h4>
-          <p>{data.text.slice(0, 100)}...</p>
+          <p>{data.text.slice(0, 70)}...</p>
         </div>
         <div className={classes.cardFooter}>
           <Link href={`/ship/${data._id}`}>

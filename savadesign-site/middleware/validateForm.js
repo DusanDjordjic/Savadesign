@@ -1,5 +1,4 @@
 const Joi = require("joi");
-const myCustomJoi = Joi.extend(require("joi-phone-number"));
 
 export const validateForm = async (
   name = "",

@@ -35,33 +35,7 @@
         text-align: justify;
       }
     }
-    .table {
-      table {
-        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.6);
-        border-spacing: 0;
-        width: 100%;
-        color: $--clr-white;
-
-        tr {
-          background-color: $--clr-green;
-          transition: $--transition;
-          &:nth-child(2n-1) {
-            background-color: $--clr-green-darker;
-          }
-          td {
-            padding: 10px;
-
-            &:nth-child(2n-1) {
-              font-weight: 500;
-              border-right: 1px solid $--clr-black-04;
-            }
-          }
-          &:hover {
-            filter: grayscale(70%);
-          }
-        }
-      }
-    }
+    
   }
 }
 .introImage {

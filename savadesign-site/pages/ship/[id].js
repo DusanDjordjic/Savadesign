@@ -4,8 +4,9 @@ import { jsonify } from "../../middleware/jsonify";
 import classes from "../../styles/SingleShip.module.scss";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import ImageSlider from "../../components/imageSlider/ImageSlider";
 const Ships = ({ singleItem }) => {
-  const { title, text, image, table } = singleItem;
+  const { title, text, image } = singleItem;
   const router = useRouter();
   return (
     <>
@@ -19,27 +20,15 @@ const Ships = ({ singleItem }) => {
           <div className={classes.dash}></div>
         </div>
         <div className={classes.introImage}>
-          <Image src={image} layout="fill" />
+          <ImageSlider images={image}/>
+          <Image src={image[0]} layout="fill" />
         </div>
         <div className={classes.content}>
           <div className={classes.text}>
             <p>{text}</p>
             <button onClick={() => router.push("/#projects")}>Back</button>
           </div>
-          <div className={classes.table}>
-            <table>
-              <tbody>
-                {table.map((item, index) => {
-                  return (
-                    <tr key={index}>
-                      <td>{item[0]}</td>
-                      <td>{item[1]}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+          
         </div>
       </div>
     </>
