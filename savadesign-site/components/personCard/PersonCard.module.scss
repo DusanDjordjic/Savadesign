@@ -1,6 +1,7 @@
 @import "../../styles/globals/vars.scss";
 .personCard {
   padding-top: 30px;
+  min-width: 300px;
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);

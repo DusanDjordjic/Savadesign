@@ -32,8 +32,6 @@ const ImageSlider = ({ images }) => {
                   ? `${classes.imageWrapper} ${classes.active}`
                   : classes.imageWrapper
               }
-              onClick={() => setActiveIndex(index)}
-              //style={{ transform: `translateY(-${index * 100}%)` }}
             >
               <Image src={item} className={classes.image} layout="fill" />
             </div>

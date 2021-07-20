@@ -1,6 +1,6 @@
 import classes from "./PersonCard.module.scss";
 import Image from "next/image";
-import src from "../../public/people/owner.png";
+import src from "../../public/people/owner.jpg";
 import { IoMdMail } from "react-icons/io";
 import { FiCopy } from "react-icons/fi";
 import { FaPhone, FaLinkedinIn } from "react-icons/fa";
@@ -15,7 +15,7 @@ const PersonCard = ({ displayMessageBox }) => {
       <div className={classes.imageBox}>
         <Image src={src} />
       </div>
-      <p className={classes.name}>Goran Budečevič</p>
+      <p className={classes.name}>Goran Budečević</p>
       <p className={classes.position}>Owner</p>
       <div className={classes.footer}>
         <p title="Copy to clipboard" onClick={(e) => copyToClipboard(e)}>
