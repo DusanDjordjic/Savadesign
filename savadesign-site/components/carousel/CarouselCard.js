@@ -7,7 +7,9 @@ const CarouselCard = ({ data }) => {
     <div className={classes.wrapper}>
       <div className={classes.carouselCard}>
         <div className={classes.projectImg}>
-          <Image src={data.image[0]} layout="fill" />
+          <Link href={`/ship/${data._id}`}>
+            <Image src={data.image[0]} layout="fill" />
+          </Link>
         </div>
         <div className={classes.cardText}>
           <h4>{data.title}</h4>

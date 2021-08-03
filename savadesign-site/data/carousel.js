@@ -7,6 +7,8 @@ export const carousel = [
       "/ships/chem/image2.png",
       "/ships/chem/image3.png",
       "/ships/chem/image4.png",
+      "/ships/chem/image5.png",
+      "/ships/chem/image6.png",
     ],
     text: "Inland chemical tankers are the most common inland vessels type for us in the recent years. We took part in basic design, in designing the hull form, producing Class documentation as well as workshop documentation. \nWe have experience with both normal steel and stainless steel tankers.\nWe also took part in several projects of “schelde” type tankers for inland and coastal operation with overall dimension of 135x17.5x6.0 m",
   },
@@ -17,32 +19,59 @@ export const carousel = [
       "/ships/asphalt/image1.png",
       "/ships/asphalt/image2.png",
       "/ships/asphalt/image3.png",
+      "/ships/asphalt/image4.png",
+      "/ships/asphalt/image5.png",
+      "/ships/asphalt/image6.png",
     ],
     text: "We had opportunity to take part in producing class and workshop documentation for two inland asphalt tankers. First one was 135x17.5x7.8 (capacity 7200m3) and second one was 110x11.45x5.3 (2500m\\m3). ",
   },
   {
     _id: "3",
     title: "LNG Tanker",
-    image: ["/ships/gas/image1.png", "/ships/gas/image2.png", "/ships/gas/image3.png"],
+    image: [
+      "/ships/gas/image1.png",
+      "/ships/gas/image2.png",
+      "/ships/gas/image3.png",
+    ],
     text: "SavaDesign took part in serie of inland LNG tankers and barges, providing workshop documentation for these projects. Mostly there were two types, 110x11.45(2800m3) and 135x11.45 (3000m3) .These tankers have special construction with supports for non-structural LNG tanks.",
   },
 
   {
     _id: "4",
     title: "Dry Cargo / Container Carrier",
-    image: ["/ships/cont/image1.png", "/ships/cont/image2.png", "/ships/cont/image3.png","/ships/cont/image4.png","/ships/cont/image5.png"],
+    image: [
+      "/ships/cont/image1.png",
+      "/ships/cont/image2.png",
+      "/ships/cont/image3.png",
+      "/ships/cont/image4.png",
+      "/ships/cont/image5.png"
+    ],
     text: "We took part in producing workshop documentation for both self-propelled vessels and barges specialized for carrying containers",
   },
   {
     _id: "5",
     title: "Pushers & Tugs",
-    image: ["/ships/pusher/image1.png", "/ships/pusher/image2.png", "/ships/pusher/image3.png","/ships/pusher/image4.png","/ships/pusher/image5.png","/ships/pusher/image6.png","/ships/pusher/image7.png","/ships/pusher/image8.png","/ships/pusher/image9.png"],
+    image: [
+      "/ships/pusher/image1.png",
+      "/ships/pusher/image2.png",
+      "/ships/pusher/image3.png",
+      "/ships/pusher/image4.png",
+      "/ships/pusher/image5.png",
+      "/ships/pusher/image6.png",
+      "/ships/pusher/image7.png",
+      "/ships/pusher/image8.png",
+      "/ships/pusher/image9.png"
+    ],
     text: "We took part in producing class documentation for several Pushers and tugs, both inland and seagoing.",
   },
   {
     _id: "6",
     title: "Passenger Ship",
-    image: ["/ships/pass/image1.png", "/ships/pass/image2.png", "/ships/pass/image3.png"],
+    image: [
+      "/ships/pass/image1.png",
+      "/ships/pass/image2.png",
+      "/ships/pass/image3.png"
+    ],
     text: "SavaDesign produced hull workshop documentation packages for passenger vessels from small passenger boats, river taxis to luxury river cruisers.",
   },
   {
@@ -57,7 +86,7 @@ export const carousel = [
     text: "We took part in producing class and workshop documentation for various types of pontoons, designed for different applications: carrying deck load, work pontoons, different commercial types ( restaurants, hotels...) and private houses...",
   },
   {
-    _id: "9",
+    _id: "8",
     title: "Barge",
     image: [
       "/ships/barge/image1.png",
@@ -75,7 +104,7 @@ export const carousel = [
     text: "We took part in construction of many types of barges, from dry cargo barges, gravel and sand barges, tank barges...",
   },
   {
-    _id: "10",
+    _id: "9",
     title: "Workboat",
     image: [
       "/ships/work/image1.png",
@@ -87,7 +116,7 @@ export const carousel = [
     text: "We produced hull workshop documentation packages for several types of work boats, dredger support vessels, excavator platforms...",
   },
   {
-    _id: "11",
+    _id: "10",
     title: "Dredger",
     image: [
       "/ships/dredger/image1.png",
@@ -98,7 +127,7 @@ export const carousel = [
     text: "We took part in producing hull workshop documentation for TSH and WI dredgers for Dutch market",
   },
   {
-    _id: "12",
+    _id: "11",
     title: "Fish Feed Barge",
     image: [
       "/ships/fish/image1.png",
@@ -109,11 +138,12 @@ export const carousel = [
       "/ships/fish/image6.png",
       "/ships/fish/image7.png",
       "/ships/fish/image8.png",   
+      "/ships/fish/image9.png",   
     ],
     text: "We took part in developing, producing class and workshop documentation for series of fish feed barges. These barges are used as floating fish feed storage and support vessels at marine aquaculture sites",
   },
   {
-    _id: "13",
+    _id: "12",
     title: "Dry Dock",
     image: ["/ships/drydock/image1.png", "/ships/drydock/image2.png", "/ships/drydock/image3.png"],
     text: "We delivered workshop package for hull construction of 33mx20m drydock",
