@@ -19,13 +19,15 @@ const Ships = ({ singleItem }) => {
           <h1>{title}</h1>
           <div className={classes.dash}></div>
         </div>
-        <div className={classes.introImage}>
-          <ImageSlider images={image} />
-        </div>
-        <div className={classes.content}>
-          <div className={classes.text}>
-            <p>{text}</p>
-            <button onClick={() => router.push("/#projects")}>Back</button>
+        <div className={classes.wrapper}>
+          <div className={classes.introImage}>
+            <ImageSlider images={image} />
+          </div>
+          <div className={classes.content}>
+            <div className={classes.text}>
+              <p>{text}</p>
+              <button onClick={() => router.push("/#projects")}>Back</button>
+            </div>
           </div>
         </div>
       </div>

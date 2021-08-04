@@ -37,11 +37,7 @@ const LocationMap = ({ displayMessageBox }) => {
 
   return (
     <div className={classes.container}>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.6981505449735!2d19.609222315754636!3d44.97012687429468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ba527c16bb297%3A0x5345bea30c297612!2sSvetog%20Dimitrija%2019%2C%20Sremska%20Mitrovica%20320202!5e0!3m2!1sen!2srs!4v1626178758446!5m2!1sen!2srs"
-        style={{ border: 0, width: "100%", height: 500 }}
-        loading="lazy"
-      ></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d860.9511474436893!2d19.610280829239294!3d44.97069594748282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDU4JzE0LjUiTiAxOcKwMzYnMzkuMCJF!5e1!3m2!1sen!2srs!4v1628075267439!5m2!1sen!2srs" style={{ border: 0, width: "100%", height: 500 }} loading="lazy"></iframe>
       <div className={classes.contactForm}>
         <h4>Send Us a Message</h4>
         <p>We are here to assist you.</p>

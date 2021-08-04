@@ -127,7 +127,7 @@ const Home = (props) => {
             <div className={`${classes.dash} ${classes.dashgreen}`}></div>
           </div>
           <div className={classes.content}>
-            <PersonCard displayMessageBox={displayMessageBox} />
+            {/* <PersonCard displayMessageBox={displayMessageBox} /> */}
             <LocationMap displayMessageBox={displayMessageBox} />
           </div>
         </div>
