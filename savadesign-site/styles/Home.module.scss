@@ -96,63 +96,43 @@
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      .contactCard {
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.6);
-        .ccHeader {
-          p {
-            text-align: center;
-            font-weight: 500;
-            font-size: $--font-h3;
-            padding: 10px 0;
-            background-color: $--clr-green-darker;
-            color: $--clr-white;
-          }
-        }
-        .ccText {
-          padding: 0 10px;
-          h4 {
-            font-weight: 500;
-            font-size: $--font-h3;
-            margin: 10px 0;
-            text-align: center;
-          }
-          ul {
-            margin: 20px 0;
-            text-align: center;
-            list-style: none;
-            li {
-              min-width: 100%;
-              margin-bottom: 10px;
-              a {
-                &:hover {
-                  text-decoration: underline;
-                }
-              }
-            }
-          }
-        }
-        .ccFooter {
-          border-top: 1px solid $--clr-black-04;
-          a {
-            display: block;
-            text-align: center;
-            padding: 15px;
+      .contactInfo{
+        width: 100%;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr;
+        div{
+          text-align: center;
+          border-bottom: 3px solid $--clr-green;
+          p{
+            font-size: 0.8rem;
+            margin-top: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            border-left: 3px solid transparent;
+            padding: 5px 10px;
+            text-align: left;
+            position: relative;
             transition: $--transition;
-            &:hover {
-              background-color: $--clr-black;
-              color: $--clr-green-darker;
-            }
             svg {
-              font-size: $--font-h3;
+              margin-right: 10px;
+              display: block;
+            }
+            .copyIcon{
+              position: absolute;
+              right: 10px;
+            }
+            &:hover {
+              color: $--clr-gray;
+              border-left: 3px solid $--clr-green;
+              background-color: $--clr-white-02;
             }
           }
         }
+        
       }
-      .contactCardLinks {
-        grid-column: 1/3;
-      }
+      
     }
   }
   .ownerSec {
@@ -170,6 +150,14 @@
       .content {
         padding: 20px 60px;
         grid-template-columns: 1fr 1fr;
+        .contactInfo{
+          grid-template-columns: 1fr 1fr;
+          div{
+            p{
+              font-size: 0.9rem;
+            }
+          }
+        }
       }
     }
   }
@@ -222,6 +210,14 @@
       .content {
         padding: 20px;
         grid-template-columns: 1fr 1fr;
+        .contactInfo{
+          grid-template-columns: 1fr 1fr 1fr;
+          div{
+            p{
+              font-size: 1rem;
+            }
+          }
+        }
       }
     }
   }

@@ -9,8 +9,11 @@ import { carousel } from "../data/carousel";
 import { jsonify } from "../middleware/jsonify";
 import { IoIosArrowUp } from "react-icons/io";
 import FloatingLinks from "../components/floatingLinks/FloatingLinks";
+import { IoMdMail } from "react-icons/io";
+import { FiCopy } from "react-icons/fi";
+import { HiOfficeBuilding } from 'react-icons/hi';
+import { FaPhone } from "react-icons/fa";
 import IntroGrid from "../components/IntroGrid/introgrid";
-import PersonCard from "../components/personCard/PersonCard";
 import MessageBox from "../components/layout/MessageBox";
 import LocationMap from "../components/locationMap/LocationMap";
 const Home = (props) => {
@@ -20,6 +23,10 @@ const Home = (props) => {
   const displayMessageBox = (text) => {
     setMsgBox(true);
     setMsgText(text);
+  };
+  const copyToClipboard = (e) => {
+    navigator.clipboard.writeText(e.target.innerText);
+    displayMessageBox("Copied to Clipboard");
   };
   const handleScroll = () => {
     if (window.scrollY >= 500) {
@@ -127,7 +134,26 @@ const Home = (props) => {
             <div className={`${classes.dash} ${classes.dashgreen}`}></div>
           </div>
           <div className={classes.content}>
-            {/* <PersonCard displayMessageBox={displayMessageBox} /> */}
+            <div className={classes.contactInfo}>
+              <div>
+                <h3>Office Address</h3>
+                <p title="Copy to clipboard" onClick={(e) => copyToClipboard(e)}>
+                  <HiOfficeBuilding /> Svetog dimitrija 19G, Sremska Mitrovica <FiCopy className={classes.copyIcon}/>
+                </p>
+              </div>
+              <div>
+                <h3>Phone Number</h3>
+                <p title="Copy to clipboard" onClick={(e) => copyToClipboard(e)}>
+                  <FaPhone /> +381-64-309-45-43 <FiCopy className={classes.copyIcon}/>
+                </p>
+              </div>
+              <div>
+                <h3>Email Address</h3>
+                <p title="Copy to clipboard" onClick={(e) => copyToClipboard(e)}>
+                  <IoMdMail /> gbudecevic@yahoo.com <FiCopy className={classes.copyIcon}/>
+                </p>
+              </div>
+            </div>
             <LocationMap displayMessageBox={displayMessageBox} />
           </div>
         </div>
